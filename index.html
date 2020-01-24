@@ -76,6 +76,45 @@
             padding-top: 0px !important;
         }
 
+        .containeroerlay
+        {
+            height: calc(100vh - 60px);
+            position: relative;
+           
+        }
+
+        .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(125, 129, 131);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+
+}
+
+        .containeroerlay:hover .overlay {
+  height: 100%;
+}
+
+
+        .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
     </style>
 </head>
 
@@ -171,27 +210,46 @@
     <!-- Hero End -->
 
     <!-- Begin Service div -->
-    
+  
     <section class="section toppad">
      
         <div col-xl-12>
             <div class="container-fluid">
         <div class="row">
-          <div class="col-sm" style="height: calc(100vh - 60px); border: 1px solid black;">
-            <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block">
+          <div class="col-sm containeroerlay" style="background-color: #4ed9b8;">
+            <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
+            <p>testing the text</p>
+            <div class="overlay">
+                <div class="text">
+                <h2>Hello world</h2>
+                <p>Thats how star do.</p>
+                </div>
+              </div>
           </div>
-          <div class="col-sm" style="height: calc(100vh - 60px); border: 1px solid black;">
-            <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block">
+          <div class="col-sm containeroerlay" style="background-color: black;" >
+            <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
           </div>
-          <div class="col-sm" style="height: calc(100vh - 60px); border: 1px solid black;">
-            <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block">
+          <div class="col-sm containeroerlay" style="background-color: brown;" >
+            <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
           </div>
-          <div class="col-sm" style="height: calc(100vh - 60px); border: 1px solid black;">
-            <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block">
+          <div class="col-sm containeroerlay" style="background-color: chocolate;">
+            <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
           </div>
         </div>
         </div>
         </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="hero-bottom-img">
+                    <img src="images/hero-7-shape-dark.png" alt="" class="img-fluid shape-dark mx-auto" style="opacity: 0.4;">
+                    <img src="images/hero-7-shape-light.png" alt="" class="img-fluid shape-light mx-auto">
+                    
+                </div>
+            </div>
+        </div>
+
+
       </section>
 
 
