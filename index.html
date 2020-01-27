@@ -80,6 +80,7 @@
         {
             height: calc(100vh - 60px);
             position: relative;
+            
            
         }
 
@@ -98,6 +99,8 @@
 
         .containeroerlay:hover .overlay {
   height: 100%;
+  cursor: pointer;
+
 }
 
 
@@ -113,6 +116,26 @@
   text-align: center;
 }
 
+ a.close-overlay.hidden {
+  display: none;
+}
+
+a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+}
 
 
     </style>
@@ -172,7 +195,7 @@
     <!-- Hero Start -->
     <section class="hero-7-bg position-relative" id="home">
         <div class="hero-7-bg-overlay"></div>
-        <div class="container">
+        <div class="container ">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="hero-title">
@@ -216,7 +239,7 @@
         <div col-xl-12>
             <div class="container-fluid">
         <div class="row">
-          <div class="col-sm containeroerlay" style="background-color: #4ed9b8;">
+          <div class="col-sm containeroerlay overlaycont" style="background-color: #4ed9b8;">
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
             <p>testing the text</p>
             <div class="overlay">
@@ -224,6 +247,7 @@
                 <h2>Hello world</h2>
                 <p>Thats how star do.</p>
                 </div>
+                <a class="close-overlay hidden" style="color: white;"><span><i class="mdi mdi-arrow-left"></i></span></a>
               </div>
           </div>
           <div class="col-sm containeroerlay" style="background-color: black;" >
@@ -440,6 +464,43 @@
     </script>
     <!--End of Tawk.to Script-->
     <!--Chat section End-->
+
+
+    <script src="js/modernizr.js"></script>
+	<script>
+	    $(document).ready(function(){
+	        if (Modernizr.touch) {
+	            // show the close overlay button
+	            $(".close-overlay").removeClass("hidden");
+	            // handle the adding of hover class when clicked
+	            $(".overlaycont").click(function(e){
+	                if (!$(this).hasClass("hover")) {
+	                    $(this).addClass("hover");
+	                }
+	            });
+	            // handle the closing of the overlay
+	            $(".close-overlay").click(function(e){
+	                e.preventDefault();
+	                e.stopPropagation();
+	                if ($(this).closest(".overlaycont").hasClass("hover")) {
+	                    $(this).closest(".v").removeClass("hover");
+	                }
+	            });
+	        } else {
+	            // handle the mouseenter functionality
+	            $(".overlaycont").mouseenter(function(){
+	                $(this).addClass("hover");
+	            })
+	            // handle the mouseleave functionality
+	            .mouseleave(function(){
+	                $(this).removeClass("hover");
+	            });
+	        }
+	    });
+	</script>
+
+
+
 </body>
 
 </html>
