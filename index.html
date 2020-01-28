@@ -28,6 +28,8 @@
 
 
     <style>
+      
+
         .text-muted {
             color: #083b66 !important;
             font-size: 14px !important;
@@ -35,7 +37,7 @@
         .title {
 
        font-weight: 900 !important;
-       font-family:"Oracle Sans",-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif;
+       font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif;;
        /* font-family: 'Modak', cursive;
        font-family: 'Chewy', cursive; */
        /* text-shadow: -1px -1px 0 #4ed9b8, 1px -1px 0 #4ed9b8, -1px 1px 0 #4ed9b8, 1px 1px 0 #4ed9b8; */
@@ -97,11 +99,40 @@
 
 }
 
+#bg1cover
+{
+    background: url("images/bg1cover.jpg") no-repeat;
+    background-size: cover;
+}
+
+#bg2cover
+{
+    background: url("images/bg2cover.png") no-repeat;
+    background-size: cover;
+}
+
+#bg3cover
+{
+    background: url("images/bg3cover.png") no-repeat;
+    background-size: cover;
+}
+
+#bg4cover
+{
+    background: url("images/bg4cover.png") no-repeat;
+   background-size: cover;
+   background-clip: border-box;
+}
+
+
+
         .containeroerlay:hover .overlay {
   height: 100%;
   cursor: pointer;
 
 }
+
+
 
 
         .text {
@@ -138,6 +169,43 @@ a.close-overlay {
 
 }
 
+#bg1
+{
+    background: url("images/bg1.jpg") no-repeat;
+    /* background-repeat: repeat-y; */
+    background-size: cover;
+}
+#bg2
+{
+    background: url("images/bg2.png") no-repeat;
+   background-size: cover;
+    
+
+}
+
+#bg3
+{
+    background: url("images/bg3.png") no-repeat;
+   background-size: cover;
+   background-clip: border-box;
+
+}
+
+#bg4
+{
+    background: url("images/bg4.png") no-repeat;
+   background-size: cover;
+   background-clip: border-box;
+}
+
+.innercontent
+{
+    text-align: center;
+    margin-top: 50%;
+    color: white;
+    font-weight: 900;
+    font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif;
+}
 
     </style>
 </head>
@@ -240,51 +308,63 @@ a.close-overlay {
         <div col-xl-12>
             <div class="container-fluid">
         <div class="row">
-          <div class="col-sm containeroerlay overlaycont" style="background-color: #4ed9b8;">
+          <div class="col-sm containeroerlay overlaycont" id="bg1">
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-            <p>testing the text</p>
-            <div class="overlay">
+            <div class="innercontent">
+                <p>I need Content Here</p>
+            
+            </div>
+            <div class="overlay" id="bg1cover">
                 <div class="text">
                 <h2>Hello world</h2>
-                <p>Thats how star do.</p>
+                <p>Content needed Here too.</p>
                 </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
               </div>
           </div>
          
-          <div class="col-sm containeroerlay" style="background-color: black;" >
+          <div class="col-sm containeroerlay" id="bg2" >
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-            <p>testing the text</p>
-            <div class="overlay">
+            <div class="innercontent">
+                <p>I need Content Here</p>
+            
+            </div>
+            <div class="overlay" id="bg2cover">
                 <div class="text">
-                <h2>Hello world</h2>
-                <p>Thats how star do.</p>
-                </div>
+                    <h2>Hello world</h2>
+                    <p>Content needed Here too.</p>
+                    </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
               </div>
           </div>
           
-          <div class="col-sm containeroerlay" style="background-color: brown;" >
+          <div class="col-sm containeroerlay" id="bg3" >
              <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-             <p>testing the text</p>
-             <div class="overlay">
-                 <div class="text">
-                 <h2>Hello world</h2>
-                 <p>Thats how star do.</p>
-                 </div>
+             <div class="innercontent">
+                <p>I need Content Here</p>
+            
+            </div>
+             <div class="overlay" id="bg3cover">
+                <div class="text">
+                    <h2>Hello world</h2>
+                    <p>Content needed Here too.</p>
+                    </div>
                  <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
                </div>
           </div>
          
          
-          <div class="col-sm containeroerlay" style="background-color: chocolate;">
+          <div class="col-sm containeroerlay" id="bg4">
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-            <p>testing the text</p>
-            <div class="overlay">
+            <div class="innercontent">
+                <p>I need Content Here</p>
+            
+            </div>
+            <div class="overlay" id="bg4cover">
                 <div class="text">
-                <h2>Hello world</h2>
-                <p>Thats how star do.</p>
-                </div>
+                    <h2>Hello world</h2>
+                    <p>Content needed Here too.</p>
+                    </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
               </div>
           </div>
@@ -294,7 +374,7 @@ a.close-overlay {
         </div>
         </div>
 
-        <div class="container-fluid">
+        <!-- <div class="container-fluid">
             <div class="row">
                 <div class="hero-bottom-img">
                     <img src="images/hero-7-shape-dark.png" alt="" class="img-fluid shape-dark mx-auto" style="opacity: 0.4;">
@@ -302,7 +382,7 @@ a.close-overlay {
                     
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
       </section>
