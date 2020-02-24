@@ -139,12 +139,14 @@
   color: white;
   font-size: 20px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+   top: 45%; 
+   left: 51%;
+  text-align: left;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  width: 100%;
 }
 
  a.close-overlay.hidden {
@@ -204,7 +206,35 @@ a.close-overlay {
     margin-top: 50%;
     color: white;
     font-weight: 900;
-    font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif;
+    font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif !important;
+}
+
+.navbar{
+    background-image: linear-gradient(45deg, #4ed9b840, #083b66) !important;
+    
+}
+
+
+
+.navbar-light .navbar-nav li a {
+    color: #083b66 !important;
+}
+
+.navbar-light .navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.socicon
+{
+    color: white !important;
+}
+.h3s
+{
+    text-align: left;
+    font-size: 16px;
+}
+hr{
+    border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
 }
 
     </style>
@@ -213,7 +243,7 @@ a.close-overlay {
 <body>
 
     <!-- Loader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status">
             <div class="sk-chase">
                 <div class="sk-chase-dot"></div>
@@ -224,20 +254,20 @@ a.close-overlay {
                 <div class="sk-chase-dot"></div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark nav-light">
+    <!-- <nav class="navbar fixed-top navbar-custom sticky sticky-dark nav-light">
         <div class="container">
-            <!-- LOGO -->
+            LOGO
             <a class="navbar-brand logo" href="layout-two-1.html">
                 <img src="images/easytelLOGO.png" alt="" class="logo-dark" height="100">
                 <img src="images/easytelLOGO.png" alt="" class="logo-light" height="130">
             </a>
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="mdi mdi-menu"></i>
-            </button> -->
-            <!-- <div class="collapse navbar-collapse" id="navbarCollapse">
+            </button> 
+             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
                     <li class="nav-item active">
                         <a href="#home" class="nav-link">Home</a>
@@ -256,13 +286,42 @@ a.close-overlay {
                         <a href="#contact" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
-            </div> -->
+            </div> 
         </div>
-    </nav>
+    </nav> -->
+   
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3 rounded">
+        <a class="navbar-brand" href="index.html"><img src="images/easytelLOGO.png" alt="" class="logo-dark" height="40"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item nav-link">
+              <a class="nav-link" href="#contact" style="font-weight: 900;">Contact Us</a>
+            </li>
+            
+            
+          </ul>
+        
+
+          <ul class="footer-icons list-inline f-20 mb-0">
+            <li class="list-inline-item mr-3"><a href="https://www.facebook.com/techmadeeazy/" class="socicon"><i class="mdi mdi-facebook"></i></a></li>
+            <li class="list-inline-item mr-3"><a href="https://www.instagram.com/techmadeeazy/" class="socicon"><i class="mdi mdi-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/company/techmadeeazy/about/" class="socicon"><i class="mdi mdi-linkedin"></i></a></li>
+        </ul>
+
+
+
+        </div>
+      </nav>
+   
+   
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="hero-7-bg position-relative" id="home">
+    <!-- <section class="hero-7-bg position-relative" id="home">
         <div class="hero-7-bg-overlay"></div>
         <div class="container ">
             <div class="row align-items-center">
@@ -278,7 +337,7 @@ a.close-overlay {
                             <span><p class="styletext" style="text-align: center; color: #083b66 ">LEVEL?</p></span>
                             </span>
                         </h1>
-                        <!-- <p class="text-light-70 mb-4 pb-2">Considering Taking Your Customer to The Next LEVEL?</p>-->
+                         <p class="text-light-70 mb-4 pb-2">Considering Taking Your Customer to The Next LEVEL?</p>
                         <a href="#about" class="btn btn-light">Learn More <span class="ml-2 right-icon">&#8594;</span></a>
                     </div>
                 </div>
@@ -298,7 +357,7 @@ a.close-overlay {
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Hero End -->
 
     <!-- Begin Service div -->
@@ -311,13 +370,25 @@ a.close-overlay {
           <div class="col-sm containeroerlay overlaycont" id="bg1">
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
             <div class="innercontent">
-                <p>I need Content Here</p>
+                <h1 style="font-weight: 900; text-align: left;">Cloud</h1>
+                <p class="h3s">Take advantage of our cloud VOIP Solutions.</p>
             
             </div>
             <div class="overlay" id="bg1cover">
                 <div class="text">
-                <h2>Hello world</h2>
-                <p>Content needed Here too.</p>
+                    <h1 style="font-weight: 900;text-align: left;">Cloud</h1>
+                    <p class="h3s">Take advantage of our cloud VOIP Solutions such as.</p>
+                    <hr/>
+                    <ul style="text-align: left;">
+                        <li><a href="#">Eazytel Cloud PBX</a></li>
+                        <p style="font-size: 14px;">Get a cloud-hosted small business phone system and get 36% savings compared to traditional phone service providers. </p>
+                        <li><a href="#">Eazytel Contact Center</a> </li>
+                        <p style="font-size: 14px;">Eazytel-CC significantly enhances customer engagement. Transform your contact center into a strategic business asset, with customer engagement services that offer omnichannel support with real-time and predictive analytics-based routing and reporting. You can even easily run your contact center from within  </p>
+                        <li><a href="#">Eazytel  Video Conference</a> </li>
+                        <p style="font-size: 14px;">Bring people and teams together with a single, high powered video meeting platform to amplify your company communications.  </p>
+
+
+                    </ul>
                 </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
               </div>
@@ -326,7 +397,8 @@ a.close-overlay {
           <div class="col-sm containeroerlay" id="bg2" >
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
             <div class="innercontent">
-                <p>I need Content Here</p>
+                <h1>Cloud</h1>
+                <h3 class="h3s">Take advantage of our cloud VOIP Solutions.</h3>
             
             </div>
             <div class="overlay" id="bg2cover">
@@ -336,21 +408,6 @@ a.close-overlay {
                     </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
               </div>
-          </div>
-          
-          <div class="col-sm containeroerlay" id="bg3" >
-             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-             <div class="innercontent">
-                <p>I need Content Here</p>
-            
-            </div>
-             <div class="overlay" id="bg3cover">
-                <div class="text">
-                    <h2>Hello world</h2>
-                    <p>Content needed Here too.</p>
-                    </div>
-                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
-               </div>
           </div>
          
          
