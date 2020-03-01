@@ -176,11 +176,13 @@ a.close-overlay {
     background: url("images/bg1.jpg") no-repeat;
     /* background-repeat: repeat-y; */
     background-size: cover;
+   /* width: 100%; */
 }
 #bg2
 {
     background: url("images/bg2.png") no-repeat;
    background-size: cover;
+   width: 100%;
     
 
 }
@@ -193,12 +195,6 @@ a.close-overlay {
 
 }
 
-#bg4
-{
-    background: url("images/bg4.png") no-repeat;
-   background-size: cover;
-   background-clip: border-box;
-}
 
 .innercontent
 {
@@ -210,7 +206,7 @@ a.close-overlay {
 }
 
 .navbar{
-    background-image: linear-gradient(45deg, #4ed9b840, #083b66) !important;
+    background-color:#403c3878 !important;
     
 }
 
@@ -226,7 +222,7 @@ a.close-overlay {
 
 .socicon
 {
-    color: white !important;
+    color: #083b66 !important;
 }
 .h3s
 {
@@ -237,7 +233,28 @@ hr{
     border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
 }
 
+
+</style>
+
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 700px;
+    }
+
+    .carousel-content {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
     </style>
+
+
+
 </head>
 
 <body>
@@ -290,7 +307,7 @@ hr{
         </div>
     </nav> -->
    
-    <nav class="navbar navbar-expand-lg navbar-light shadow-sm p-3 rounded">
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
         <a class="navbar-brand" href="index.html"><img src="images/easytelLOGO.png" alt="" class="logo-dark" height="40"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -366,17 +383,18 @@ hr{
      
         <div col-xl-12>
             <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm containeroerlay overlaycont" id="bg1">
-            <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-            <div class="innercontent">
-                <h1 style="font-weight: 900; text-align: left;">Cloud</h1>
+        <div class="row" style="display: flex;">
+          <div class="col-sm containeroerlay"  id="bg1">
+    
+             <div class="innercontent">
+                 <h1 style="font-weight: 900; text-align: left;">On-Cloud</h1>
                 <p class="h3s">Take advantage of our cloud VOIP Solutions.</p>
+                <p class="h3s">Cloud VoIP or hosted VoIP is a business phone service that routes calls through the internet. Most cloud VoIP systems come with advanced features like auto attendant, call recording, video conferencing, and long-distance calling.</p> 
             
-            </div>
+            </div> 
             <div class="overlay" id="bg1cover">
                 <div class="text">
-                    <h1 style="font-weight: 900;text-align: left;">Cloud</h1>
+                    <h1 style="font-weight: 900;text-align: left;">On-Cloud</h1>
                     <p class="h3s">Take advantage of our cloud VOIP Solutions such as.</p>
                     <hr/>
                     <ul style="text-align: left;">
@@ -391,42 +409,74 @@ hr{
                     </ul>
                 </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
-              </div>
+              </div> 
+
+
           </div>
          
           <div class="col-sm containeroerlay" id="bg2" >
             <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
             <div class="innercontent">
-                <h1>Cloud</h1>
-                <h3 class="h3s">Take advantage of our cloud VOIP Solutions.</h3>
+                <h1 style="font-weight: 900; text-align: left;">On-Prem</h1>
+                <p class="h3s">Take advantage of our cloud VOIP Solutions.</p>
+                <p class="h3s">on-premise solutions are in-house telephony and communications platforms, mainly used by the largest organizations.</p> 
+                <p class="h3s">the business will pay for their own IT infrastructure and work closely with a provider to build an entire communication system for the entire business</p>
             
             </div>
-            <div class="overlay" id="bg2cover">
+            <div class="overlay" id="bg2cover" >
                 <div class="text">
-                    <h2>Hello world</h2>
-                    <p>Content needed Here too.</p>
+                    <h1 style="font-weight: 900; text-align: left;">On-Prem</h1>
+                    <p class="h3s">Leverage on our On-premise VOIP Solutions such as.</p>
+                    <hr/>
+                    <ul style="text-align: left;">
+                        <li><a href="#">Eazytel Contact Center</a></li>
+                        <p style="font-size: 14px;">When it comes to your customers, building a better experience<br/> around them gives you the ultimate advantage.<br/> Our all-in-one contact center solution lets you make each customer's experience an exceptional one. </p>
+                        <li><a href="#">Eazytel  IP PBX </a> </li>
+                        <p style="font-size: 14px;">Eazytel  IP PBX is an all-in-one IP PBX hardware with built-in software that provides SMEs and start-ups with reliable, feature-rich VoIP communications, allowing them to upgrade their legacy PBX systems without necessitating a complete replacement of equipment.<br/> Eazytel IP PBX can integrate with existing PSTN lines and analog phone equipment in just a few hours, ensuring a seamless and cost-effective VoIP transition that will align with most companies’ long-term equipment and network upgrade strategies   </p>
+                        
+
+
+                    </ul>
                     </div>
                 <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
               </div>
           </div>
          
          
-          <div class="col-sm containeroerlay" id="bg4">
-            <!-- <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block"> -->
-            <div class="innercontent">
-                <p>I need Content Here</p>
-            
-            </div>
-            <div class="overlay" id="bg4cover">
-                <div class="text">
-                    <h2>Hello world</h2>
-                    <p>Content needed Here too.</p>
-                    </div>
-                <a class="close-overlay hidden" style="color: white;"><i class="mdi mdi-arrow-left"></i>back</a>
-              </div>
+          <div class="col-sm carousel slide" data-ride="carousel" id="demo" style="padding-left: 0px; padding-right: 0PX;">
+           
+            <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+           
+     <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     
+        <img src="images/slider1.jpg" alt="slider1" >
+        <div class="carousel-content">
+            <p>TEST</p>
+          </div>
+          <!-- <div class="carousel-caption">
+            <h3>What we do</h3>
+          </div> -->
+    </div>
+    <div class="carousel-item">
+      <img src="images/phoneuser.jpg" alt="slider2" >
+    </div>
+    <div class="carousel-item">
+      <img src="images/slider2.jpg" alt="slider3" >
+    </div>
+  </div>
+          
+         
           </div>
         
         
+        </div>
         </div>
         </div>
         </div>
@@ -613,6 +663,11 @@ hr{
     <script src="js/owl.carousel.min.js"></script>
     <!-- Main Js -->
     <script src="js/app.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
 
     <!--Chat Section Begin-->
 

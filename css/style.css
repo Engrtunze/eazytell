@@ -1736,7 +1736,7 @@ h6 {
 
 .footer {
     padding: 60px 0 0;
-    background-color: #64a1a2;
+    background-color: #403c3878;
 }
 
 .footer .logo-light {
@@ -1749,11 +1749,11 @@ h6 {
 
 .footer .footer-desc,
 .footer .footer-alt {
-    color: rgba(251, 251, 251, 0.5);
+    color: rgb(8, 59, 102);
 }
 
 .footer .footer-list-title {
-    color: #fbfbfb;
+    color: #083b66;
 }
 
 .footer .footer-icons {
@@ -1763,7 +1763,7 @@ h6 {
 }
 
 .footer .footer-icons a {
-    color: rgba(251, 251, 251, 0.5);
+    color:rgb(8, 59, 102);
 }
 
 .footer .footer-icons a:hover {
@@ -1777,7 +1777,7 @@ h6 {
 .footer .company-sub-menu li a {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
-    color: rgba(251, 251, 251, 0.5);
+    color: rgb(8, 59, 102)
 }
 
 .footer .company-sub-menu li a:hover {
