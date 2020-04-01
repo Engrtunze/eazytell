@@ -28,6 +28,8 @@
 
 
     <style>
+      
+
         .text-muted {
             color: #083b66 !important;
             font-size: 14px !important;
@@ -35,17 +37,19 @@
         .title {
 
        font-weight: 900 !important;
-       font-family: 'Modak', cursive;
-            font-family: 'Chewy', cursive;
-            text-shadow: -1px -1px 0 #4ed9b8, 1px -1px 0 #4ed9b8, -1px 1px 0 #4ed9b8, 1px 1px 0 #4ed9b8;
+       font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif;;
+       /* font-family: 'Modak', cursive;
+       font-family: 'Chewy', cursive; */
+       /* text-shadow: -1px -1px 0 #4ed9b8, 1px -1px 0 #4ed9b8, -1px 1px 0 #4ed9b8, 1px 1px 0 #4ed9b8; */
     
         }
 
         .styletext
         {
-            font-family: 'Modak', cursive;
-            font-family: 'Chewy', cursive;
-            text-shadow: -4px -2px 0 #4ed9b8, 1px -1px 0 #4ed9b8, -1px 1px 0 #4ed9b8, 1px 1px 0 #4ed9b8;
+            font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif;
+            /* font-family: 'Modak', cursive;
+            font-family: 'Chewy', cursive; */
+            
         }
 
         .h4, h4
@@ -65,14 +69,214 @@
         {
             color :#083b66 !important;
         }
+        .fixed-top
+        {
+            position: absolute !important;
+        }
+        .toppad
+        {
+            padding-top: 0px !important;
+        }
 
+        .containeroerlay
+        {
+            height: calc(100vh - 60px);
+            position: relative;
+            
+           
+        }
+
+        .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(125, 129, 131);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+
+}
+
+#bg1cover
+{
+    background: url("images/bg1cover.jpg") no-repeat;
+    background-size: cover;
+}
+
+#bg2cover
+{
+    background: url("images/bg2cover.png") no-repeat;
+    background-size: cover;
+}
+
+#bg3cover
+{
+    background: url("images/bg3cover.png") no-repeat;
+    background-size: cover;
+}
+
+#bg4cover
+{
+    background: url("images/bg4cover.png") no-repeat;
+   background-size: cover;
+   background-clip: border-box;
+}
+
+
+
+        .containeroerlay:hover .overlay {
+  height: 100%;
+  cursor: pointer;
+
+}
+
+
+
+
+        .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+   top: 45%; 
+   left: 51%;
+  text-align: left;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+ a.close-overlay.hidden {
+  display: none;
+}
+
+a.close-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+
+}
+
+#bg1
+{
+    background: url("images/bg1.jpg") no-repeat;
+    /* background-repeat: repeat-y; */
+    background-size: cover;
+   /* width: 100%; */
+}
+#bg2
+{
+    background: url("images/bg2.png") no-repeat;
+   background-size: cover;
+   width: 100%;
+    
+
+}
+
+#bg3
+{
+    background: url("images/bg3.png") no-repeat;
+   background-size: cover;
+   background-clip: border-box;
+
+}
+
+
+.innercontent
+{
+    text-align: center;
+    margin-top: 50%;
+    color: white;
+    /* font-weight: 900; */
+    -webkit-text-stroke-width: thin !important;
+    font-family:"Oracle Sans","-apple-system","BlinkMacSystemFont","Segoe UI","Helvetica Neue",sans-serif !important;
+}
+
+.navbar{
+    background-color:#403c3878 !important;
+    
+}
+
+
+
+.navbar-light .navbar-nav li a {
+    color: #083b66 !important;
+}
+
+.navbar-light .navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.socicon
+{
+    color: #083b66 !important;
+}
+.h3s
+{
+    text-align: left;
+    font-size: 14px;
+}
+hr{
+    border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
+}
+
+
+
+</style>
+
+<style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 100%;
+        height: 700px;
+    }
+
+    .carousel-content {
+  position: absolute;
+  bottom: 10%; 
+  z-index: 20;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+.carousel-text
+{
+    text-align: center;
+vertical-align: middle;
+line-height: 90px;   
+}
+
+.f{
+margin-top: unset !important;
+}
+
+.footer
+{
+    padding: 15px 0 0 !important;
+}
     </style>
+
+
+
 </head>
 
 <body>
 
     <!-- Loader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div id="status">
             <div class="sk-chase">
                 <div class="sk-chase-dot"></div>
@@ -83,20 +287,20 @@
                 <div class="sk-chase-dot"></div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!--Navbar Start-->
-    <nav class="navbar navbar-expand-lg fixed-top navbar-custom sticky sticky-dark nav-light">
+    <!-- <nav class="navbar fixed-top navbar-custom sticky sticky-dark nav-light">
         <div class="container">
-            <!-- LOGO -->
+            LOGO
             <a class="navbar-brand logo" href="layout-two-1.html">
                 <img src="images/easytelLOGO.png" alt="" class="logo-dark" height="100">
                 <img src="images/easytelLOGO.png" alt="" class="logo-light" height="130">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="mdi mdi-menu"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
+            </button> 
+             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto navbar-center" id="mySidenav">
                     <li class="nav-item active">
                         <a href="#home" class="nav-link">Home</a>
@@ -115,36 +319,80 @@
                         <a href="#contact" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
-            </div>
+            </div> 
         </div>
-    </nav>
+    </nav> -->
+   
+    <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
+        <a class="navbar-brand" href="index.html"><img src="images/easytelLOGO.png" alt="" class="logo-dark"  style="
+            margin-left: 6rem;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item nav-link">
+              <a class="nav-link" href="#contact" style="font-weight: 900;">Contact Us</a>
+            </li>
+            <li class="nav-item nav-link">
+                <a class="nav-link" href="Eazytel-CloudPBX.html" style="font-weight: 900;">Eazytel CloudPBX</a>
+              </li>
+              <li class="nav-item nav-link">
+                <a class="nav-link" href="Eazytel-Contact-Center.html" style="font-weight: 900;">Eazytel Contact Center</a>
+              </li>
+              <li class="nav-item nav-link">
+                <a class="nav-link" href="Eazytel-Telephony.html" style="font-weight: 900;">Eazytel Telephony</a>
+
+              </li>
+              <li class="nav-item nav-link">
+                <a class="nav-link" href="Eazytel-Video-Conferencing.html" style="font-weight: 900;">Eazytel Video Conferencing</a>
+              </li>
+            
+            
+          </ul>
+        
+
+          <ul class="footer-icons list-inline f-20 mb-0">
+            
+            <li class="list-inline-item mr-3"><a href="https://www.facebook.com/techmadeeazy/" class="socicon"><i class="mdi mdi-facebook"></i></a></li>
+            <li class="list-inline-item mr-3"><a href="https://www.instagram.com/techmadeeazy/" class="socicon"><i class="mdi mdi-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com/company/techmadeeazy/about/" class="socicon"><i class="mdi mdi-linkedin"></i></a></li>
+        </ul>
+
+
+
+        </div>
+      </nav>
+   
+   
     <!-- Navbar End -->
 
     <!-- Hero Start -->
-    <section class="hero-7-bg position-relative" id="home">
+    <!-- <section class="hero-7-bg position-relative" id="home">
         <div class="hero-7-bg-overlay"></div>
-        <div class="container">
+        <div class="container ">
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <div class="hero-title">
                         <div class="mb-4">
                             <i class="mdi mdi-google-circles-extended mdi-spin text-light h1"></i>
                         </div>
-                        <h1 class="hero-7-title" style="font-size: 45px;font-weight: 900">
+                        <h1 class="hero-7-title" style="font-size: 38px;font-weight: 900">
                             <span class="text-wrapper" style="text-align: center">
                                 <span class="letters text-light font-weight-normal styletext">Considering Taking Your Customer Engagement to The Next </span>
 
                             <span><p class="styletext" style="text-align: center; color: #083b66 ">LEVEL?</p></span>
                             </span>
                         </h1>
-                        <!-- <p class="text-light-70 mb-4 pb-2">Considering Taking Your Customer to The Next LEVEL?</p>-->
+                         <p class="text-light-70 mb-4 pb-2">Considering Taking Your Customer to The Next LEVEL?</p>
                         <a href="#about" class="btn btn-light">Learn More <span class="ml-2 right-icon">&#8594;</span></a>
                     </div>
                 </div>
 
                 <div class="col-lg-6 offset-lg-1">
                     <div class="mt-5 mt-lg-0">
-                        <img src="images/etel-img.png" alt="" class="img-fluid mx-auto d-block">
+                        <img src="images/etel-img.png" alt="" class="img-fluid mx-auto d-block" style="height: 400px;">
                     </div>
                 </div>
             </div>
@@ -157,417 +405,35 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- Hero End -->
 
-    <!-- Service Start -->
-    <section class="section" id="products">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 styletext" style="color: #083b66;">Awesome Products</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                        <!-- <p class="text-muted f-14">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>-->
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5">
-                    <div class="service-img mr-lg-5 mb-5 mb-lg-0">
-                        <img src="images/ourservices3.png" alt="" class="img-fluid mx-auto d-block">
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <a href="Eazytel-CloudPBX.html">
-                                <div class="service-box service-box-1 p-4">
-                                    <div class="service-icon icon-primary mb-4 mt-3">
-                                        <i class="mdi mdi-mixcloud"></i>
-                                        <img src="images/service1.png" style="height: 200px;" alt="CloudPBX" />
-                                    </div>
+    <!-- Begin Service div -->
+<!--   
+    <section class="section toppad">
 
-                                    <!-- <h4 class="mb-3 service-title">Creative Design</h4>
-                                <p class="text-muted f-15">Itaque earum rerum hic at tenetur that sapiente delectus ut aut reiciendis voluptatibus alias.</p>-->
-                                </div>
-                            </a>
-                            <a href="Eazytel-Video-Conferencing.html">
-                                <div class="service-box service-box-1 p-4">
-                                    <div class="service-icon icon-danger mb-4 mt-3">
-                                        <i class="mdi mdi-message-video"></i>
-                                        <img src="images/service-2.png" style="height: 200px;" alt="Video Conferencing" />
-                                    </div>
-                                    <!--<h4 class="mb-3 service-title">Analytics Security</h4>
-                                <p class="text-muted f-15">Itaque earum rerum hic at tenetur that sapiente delectus ut aut reiciendis voluptatibus alias.</p>-->
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-md-6">
-                            <a href="Eazytel-Contact-Center.html">
-                                <div class="service-box service-box-1 p-4 mt-md-5">
-                                    <div class="service-icon icon-success mb-4 mt-3">
-                                        <i class="mdi mdi-face-agent"></i>
-                                        <img src="images/service-3.png" style="height: 200px;" alt="Cstomer service" />
-                                    </div>
-                                    <!--<h4 class="mb-3 service-title">Data Privacy</h4>
-                                <p class="text-muted f-15">Itaque earum rerum hic at tenetur that sapiente delectus ut aut reiciendis voluptatibus alias.</p>-->
-                                </div>
-                            </a>
-                            <a href="Eazytel-Telephony.html">
-                                <div class="service-box service-box-1 p-4">
-                                    <div class="service-icon icon-info mb-4 mt-3">
-                                        <i class="mdi mdi-phone-in-talk"></i>
-                                        <img src="images/service-4.png " style="height: 200px;" alt="Telephony" />
-                                    </div>
-                                    <!-- <h4 class="mb-3 service-title">User Friendly</h4>
-                                <p class="text-muted f-15">Itaque earum rerum hic at tenetur that sapiente delectus ut aut reiciendis voluptatibus alias.</p>-->
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+      
+
+
+      </section> -->
+
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3">Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+          </div>
         </div>
-    </section>
-    <!-- Service End -->
-
-    <!-- About us Start -->
-    <section class="section bg-light" id="about">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-muted mb-0 styletext" style=" font-size: 3.5rem !important;">What is EAZYtel and The Benefits?</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                        <p class="text-muted f-17">Eazytel is a VoIP Telephony system that aids business communications and sales conversion. </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="feature-box about-info-box mb-4 ml-lg-5  p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-face-agent display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <!-- <i class="pe-7s-plane display-4 text-primary mb-4"></i> -->
-                            <div class="media-body">
-                                <h5 class="mb-2 title" >Enhance customer service management</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15">When customers make you a call, they expect that you handle them quickly, efficiently and in a professional manner.
-                                    <br/>
-                                    This is where you can tap into the useful resources of call center softwares like <strong>EAZYtel.</strong>  <br/> <strong>EAZYtel</strong> software also enables the agents to access, collect and exchange information instantaneously in order<br/>
-                                     to provide a <strong>smooth transition among agents</strong>,<strong> thus dropping client wait times.</strong>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="feature-box about-info-box mb-4 p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-file-chart display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Improved Reporting Features</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15">This amazing software provides business managers with all the necessary details they require for creating strategic plans and making important decisions.
-                                     <br/>
-                                      Some of the reporting features that <strong>EAZYtel</strong> software assists the management with include 
-                                      <ul class="text-muted" >
-                                          <li style="font-weight: bold;">
-                                            Upsell rates.
-                                          </li>
-                                          <li style="font-weight: bold;">
-                                            Revenue per call.
-                                          </li>
-                                          <li style="font-weight: bold;">
-                                            Case times.
-                                          </li>
-                                          <li style="font-weight: bold;">
-                                            Case categories.
-                                          </li>
-                                          <li style="font-weight: bold;">
-                                            Ability to evaluate call volume.
-                                          </li>
-
-
-                                      </ul>
-                                     
-
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-box about-info-box ml-lg-5  mb-4 p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-progress-wrench display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Enhance Productivity and Efficiency</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15"><strong>EAZYtel</strong> software system helps boost overall productivity and enables telephone calls to be handled in an efficient manner.
-                                <br/>
-                                When agents use the software, they are able to handle all inbound and outbound calls quickly and conveniently. 
-                                <br/>
-                                They are also able to track the calls easily and speed them up when needed.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-box about-info-box mb-4 p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-database-import display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Enhanced Data Access</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15">With <strong>EAZYtel</strong>, agents have better access to a client’s data. Call center software organizes clients’ data centrally, 
-                                    having information about everything ranging from personal info to the clients’ purchase and service history. This allows agents to interact with clients in a more timely, 
-                                    comprehensive and customized manner.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-box about-info-box mb-4 ml-lg-5  p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-share-variant display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Increased Communication and Responsibility</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15">Since it is a centralized database, <strong>EAZYtel</strong> software allows employees across various departments to share and communicate correct information about clients through updates.
-                                <br/>
-                                Moreover, call center software also offers greater accountability – every employee clearly understands personal responsibilities in sales processes and customer service so he or she can be held answerable for both success and failure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 offset-lg-1 mt-5 mt-lg-0">
-                    <div class="feature-box about-info-box mb-4 p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-finance display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Better Sales</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15"><strong>EAZYtel</strong> Call center software has the power to drive sales instantly. This is indeed one of the greatest benefits of the software.
-                                <br/>
-                                Using this software, sales managers can effectively handle the pre-sales queries of existing clients. They can easily have access to 
-                                <ul class="text-muted" >
-                                    <li style="font-weight: bold;">
-                                        Transaction history.
-                                    </li>
-                                    <li style="font-weight: bold;">
-                                        Process orders.
-                                    </li>
-                                    <li style="font-weight: bold;">
-                                        Check warranties.
-                                    </li>
-                                    <li style="font-weight: bold;">
-                                        Issue credits.
-                                    </li>
-                                    <li style="font-weight: bold;">
-                                        Handle after-sales services efficiently.
-                                    </li>
-
-
-                                </ul>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="feature-box about-info-box mb-4 ml-lg-5 p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-account-multiple-check display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Great Customer Experience</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15">Customer experience is improved when call center agents deliver appropriate and accurate information with a customized touch.
-                                    <br/>
-                                   <strong> EAZYtel </strong> call center software streamlines data processing, thus it promotes increased customer retention and brand loyalty.
-                                    <br/>
-                                    The database is also ideal for recording, observing and evaluating customer feedback about products and services.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="feature-box about-info-box mb-4 p-3">
-                        <div class="media align-items-center">
-                            <i class="mdi mdi-hand-okay display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Ease-to-use</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15">Since businesses are migrating to cloud storage nowadays, you can seek call center solutions that are based on the virtual storage system that you can easily set up and start operating for your business.</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="feature-box about-info-box mb-4 ml-lg-5  p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-priority-high display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Prioritizes clients and identify urgent calls</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15"><strong>EAZYtel</strong> software comes with call prioritizing feature that allows you to identify calls that require immediate attention. 
-                                    Call prioritizing allows you to place your clients in sequential order based on the importance of their queries or requirements. </p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="feature-box about-info-box mb-4 p-3">
-                        <div class="media align-items-center">
-                            <i class=" mdi mdi-stack-exchange display-4  mr-3 rounded-circle" alt="ehance customer icon" ></i>
-                            <div class="media-body">
-                                <h5 class="mb-2 title">Multi-channel support</h5>
-                                <p class="text-muted line-height-1_6 mb-0 f-15"> <!--  <strong>EAZYtel</strong> software helps you meet the objective of delivering support across multiple levels so that your call center executives can deliver seamless assistance to your customers, regardless of how your clients contact your customer support center
-                                
-                                    <br/>
-                                    -->
-                                <strong>EAZYtel</strong> software helps you to connect with your clients via SMS, email, chat, voice calls, video, messaging apps, as well as social media platforms such as Facebook, Twitter, Instagram, etc. enabling your clients to pick the channel that is more convenient to them. Multi-channel support goes a long way in reducing customers’ frustrations, besides enabling you to offer enhanced customer service.
-                                
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About us End -->
-
-    <!-- Fetures Start -->
-    <!--     <section class="section" id="features">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0">Our Features</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                        <p class="text-muted f-14">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box text-center px-4 py-5">
-                        <div class="text-primary feature-icon mb-3">
-                            <i class="pe-7s-world"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-1 title f-18">Unique Elements</h6>
-                        <p class="mb-0 text-muted">Itaque earum rerum tenetur.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box text-center px-4 py-5">
-                        <div class="text-primary feature-icon mb-3">
-                            <i class="pe-7s-headphones"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-1 title f-18">Active Community</h6>
-                        <p class="text-muted mb-0">Itaque earum rerum tenetur</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box text-center px-4 py-5">
-                        <div class="text-primary feature-icon mb-3">
-                            <i class="pe-7s-cup"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-1 title f-18">High Performance</h6>
-                        <p class="text-muted mb-0">Itaque earum rerum tenetur</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box text-center px-4 py-5">
-                        <div class="text-primary feature-icon mb-3">
-                            <i class="pe-7s-cash"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-1 title f-18">Premium Plugins</h6>
-                        <p class="text-muted mb-0">Itaque earum rerum tenetur</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box text-center px-4 py-5">
-                        <div class="text-primary feature-icon mb-3">
-                            <i class="pe-7s-shield"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-1 title f-18">Privacy Policy</h6>
-                        <p class="text-muted mb-0">Itaque earum rerum tenetur</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-box text-center px-4 py-5">
-                        <div class="text-primary feature-icon mb-3">
-                            <i class="pe-7s-airplay"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-1 title f-18">Responsive Layout</h6>
-                        <p class="text-muted mb-0">Itaque earum rerum tenetur</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="text-center mt-5">
-                        <a href="" class="btn btn-primary">View More <span class="ml-2 right-icon">&#8594;</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- Fetures End -->
-
-    <!-- Counter Start -->
-    <Section class="section counter-bg" id="clients">
-        <div class="counter-bg-overlay"></div>
-        <div class="container">
-
-            <div class="row justify-content-center" id="counter">
-                <div class="col-lg-6 col-md-8">
-                    <div class="text-center mb-5">
-                        <h4 class="text-uppercase mb-0 styletext" style="color: #fff;">Our Clients</h4>
-                        <div class="my-3">
-                            <img src="images/title-border.png" alt="" class="img-fluid mx-auto d-block">
-                        </div>
-                        <!-- <p class="text-muted f-14">What Our Clients Have to say</p> -->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="testi-content testi-content-1 text-center m-3 p-4 position-relative">
-                            <p class="text-muted mb-4 position-relative f-15">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
-                            <img src="images/users/3.jpg" alt="" class="img-fluid mx-auto img-thumbnail d-block rounded-circle user-img">
-                            <h5 class="title mb-0 user-name mt-4 f-18">Debbie Smith</h5>
-                            <p class="text-muted mb-2 f-15">Web Designer</p>
-                            <ul class="list-unstyled text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item h3 mb-0 mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- owl item and -->
-                    <div class="item">
-                        <div class="testi-content testi-content-1 text-center m-3 p-4 position-relative">
-                            <p class="text-muted mb-4 position-relative f-15">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</p>
-                            <img src="images/users/6.jpg" alt="" class="img-fluid mx-auto d-block img-thumbnail rounded-circle user-img">
-                            <h5 class="title mb-0 user-name mt-4 f-18">Dong Crichton</h5>
-                            <p class="text-muted mb-2 f-15">Graphic Designer</p>
-                            <ul class="list-unstyled text-warning mb-0">
-                                <li class="list-inline-item mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item h3 mb-0 mr-1"><i class="mdi mdi-star"></i></li>
-                                <li class="list-inline-item"><i class="mdi mdi-star"></i></li>
-                            </ul>
-                        </div>
-                    </div>
 
 
 
 
+<!-- End Service div -->
 
-                </div>
-            </div>
 
-        </div>
-        </div>
-    </Section>
-    <!-- Counter End -->
 
 
     <!-- contact Us Start -->
@@ -661,29 +527,36 @@
     <!-- Footer Start -->
     <section class="footer">
         <div class="container">
-            <div class="row mb-4">
+            <div class="row mb-4 f">
                 <div class="col-lg-4 col-sm-6">
                     <div class="mb-4">
-                        <a href="layout-two-1"><img src="images/easytelLOGO.png" alt="" class="logo-light" height="124" /></a>
+                        <a href="layout-two-1"><img src="images/easytelflogo.png" alt="" class="logo-light" height="124" /></a>
                         <a href="layout-two-1"><img src="images/logo-dark.png" alt="" class="logo-dark" height="22" /></a>
+                   
+                   
+                        <!-- <p class="footer-desc f-15">Address : 13, Babatunde Dabiri Street, Lekki Phase 1, Lagos.</p>
+                        <ul class="footer-icons list-inline f-20 mb-0 mt-4">
+                            <li class="list-inline-item mr-3"><a href="https://www.facebook.com/techmadeeazy/" class=""><i class="mdi mdi-facebook"></i></a></li>
+                                         <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-twitter"></i></a></li>
+                            <li class="list-inline-item mr-3"><a href="https://www.instagram.com/techmadeeazy/" class=""><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/company/techmadeeazy/about/" class=""><i class="mdi mdi-linkedin"></i></a></li>
+                        </ul> -->
                     </div>
-                    <p class="footer-desc f-15">Address : 13, Babatunde Dabiri Street, Lekki Phase 1, Lagos.</p>
-                    <ul class="footer-icons list-inline f-20 mb-0 mt-4">
-                        <li class="list-inline-item mr-3"><a href="https://www.facebook.com/techmadeeazy/" class=""><i class="mdi mdi-facebook"></i></a></li>
-                        <!--               <li class="list-inline-item mr-3"><a href="#" class=""><i class="mdi mdi-twitter"></i></a></li>-->
-                        <li class="list-inline-item mr-3"><a href="https://www.instagram.com/techmadeeazy/" class=""><i class="mdi mdi-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="https://www.linkedin.com/company/techmadeeazy/about/" class=""><i class="mdi mdi-linkedin"></i></a></li>
-                    </ul>
+                   
                 </div>
                 <div class="col-lg-7 offset-lg-1">
                     <div class="row mt-lg-0">
-                        <!-- <div class="col-md-4 mt-4 mt-lg-0">
-                            <h5 class="footer-list-title f-18 font-weight-normal mb-3">Customer</h5>
+                         <div class="col-md-4 mt-4 mt-lg-0">
+                            <h5 class="footer-list-title f-18 font-weight-normal mb-3">Contact</h5>
                             <ul class="list-unstyled company-sub-menu">
-                                <li><a href="">Buyer</a></li>
-                                <li><a href="">Supplier</a></li>
+                                <li>Address : 13, Babatunde Dabiri Street, Lekki Phase 1, Lagos.</li>
+                                <li class="list-inline-item mr-3"><a href="https://www.facebook.com/techmadeeazy/" class=""><i class="mdi mdi-facebook"></i></a></li>
+                                <li class="list-inline-item mr-3"><a href="https://www.instagram.com/techmadeeazy/" class=""><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/company/techmadeeazy/about/" class=""><i class="mdi mdi-linkedin"></i></a></li> 
+
+                               
                             </ul>
-                        </div>-->
+                        </div>
                         <div class="col-md-4 mt-4 mt-lg-0">
                             <h5 class="footer-list-title f-18 font-weight-normal mb-3">Company</h5>
                             <ul class="list-unstyled company-sub-menu">
@@ -703,7 +576,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 mt-3">
+                <div class="col-lg-12 mt-3 f">
                     <div class="text-center footer-alt my-3">
                         <p class="f-15">2020 © Eazytell. Design by TME</p>
                     </div>
@@ -730,6 +603,11 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Main Js -->
     <script src="js/app.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
 
     <!--Chat Section Begin-->
 
@@ -749,6 +627,43 @@
     </script>
     <!--End of Tawk.to Script-->
     <!--Chat section End-->
+
+
+    <script src="js/modernizr.js"></script>
+	<script>
+	    $(document).ready(function(){
+	        if (Modernizr.touch) {
+	            // show the close overlay button
+	            $(".close-overlay").removeClass("hidden");
+	            // handle the adding of hover class when clicked
+	            $(".overlaycont").click(function(e){
+	                if (!$(this).hasClass("hover")) {
+	                    $(this).addClass("hover");
+	                }
+	            });
+	            // handle the closing of the overlay
+	            $(".close-overlay").click(function(e){
+	                e.preventDefault();
+	                e.stopPropagation();
+	                if ($(this).closest(".overlaycont").hasClass("hover")) {
+	                    $(this).closest(".v").removeClass("hover");
+	                }
+	            });
+	        } else {
+	            // handle the mouseenter functionality
+	            $(".overlaycont").mouseenter(function(){
+	                $(this).addClass("hover");
+	            })
+	            // handle the mouseleave functionality
+	            .mouseleave(function(){
+	                $(this).removeClass("hover");
+	            });
+	        }
+	    });
+	</script>
+
+
+
 </body>
 
 </html>
